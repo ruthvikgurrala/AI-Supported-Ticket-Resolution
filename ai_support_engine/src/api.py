@@ -326,6 +326,7 @@ async def upload_file(file: UploadFile = File(...)):
     
     # Update Metadata
     _chunk_meta.extend(new_meta)
+    os.makedirs(os.path.dirname(META_PATH), exist_ok=True)
     with open(META_PATH, "w", encoding="utf-8") as f:
         json.dump(_chunk_meta, f, ensure_ascii=False, indent=2)
     
