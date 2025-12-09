@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { MessageSquare, User, Shield, Send, CheckCircle, XCircle, Sparkles, FileText, BarChart2, AlertTriangle, ThumbsDown, ThumbsUp, Moon, Sun, Globe, Trash2, Database, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = 'https://ai-supported-ticket-resolution.onrender.com';
 
 // --- Shared Components ---
 
