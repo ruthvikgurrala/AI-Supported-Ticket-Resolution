@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .glass-dark {
+    @apply dark:bg-gray-900/70 dark:backdrop-blur-md dark:border-gray-700/30 dark:shadow-xl;
+  }
+
+  .glass-card {
+    @apply glass glass-dark rounded-xl transition-all duration-300;
+  }
+
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm;
+  }
+
+  .custom-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Global Scrollbar Hiding - Nuclear Option */
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+}
+
+* {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+:root {
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  --gradient-surface: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+  --gradient-dark: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+/* Dark mode navbar specific override - Darker */
+.dark .glass-nav {
+  @apply bg-slate-950/95 border-slate-800;
+}
+
+body {
+  @apply bg-gray-50 dark:bg-gray-900 transition-colors duration-300;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(236, 72, 153, 0.15) 0px, transparent 50%);
+  background-attachment: fixed;
+  overflow-y: auto;
+  /* Allow scrolling */
+}

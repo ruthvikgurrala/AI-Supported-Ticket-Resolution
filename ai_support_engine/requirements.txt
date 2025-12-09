@@ -1,0 +1,11 @@
+torch
+transformers
+sentence-transformers
+pandas
+scikit-learn
+nltk
+fastapi
+uvicorn
+pypdf
+python-multipart
+google-cloud-firestore

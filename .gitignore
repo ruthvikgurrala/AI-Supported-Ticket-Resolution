@@ -1,0 +1,44 @@
+# General
+.DS_Store
+*~
+*.log
+
+# Sensitive Credentials (NEVER COMMIT THESE)
+.env
+*.json
+!package.json
+!tsconfig.json
+!jsconfig.json
+!manifest.json
+!chunk_meta.json
+!feedback.json
+
+project_workflow.md
+
+# Exclude specific Firebase Key
+ai_support_engine/ticketsupportresolution-firebase-adminsdk-*.json
+
+# Python / Backend
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+ai_support_engine/venv/
+*.egg-info/
+.pytest_cache/
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+.next/
+coverage/
+
+# VS Code
+.vscode/
+
+# Project Specific
+ai_support_engine/logs/
+ai_support_engine/data/*.pdf

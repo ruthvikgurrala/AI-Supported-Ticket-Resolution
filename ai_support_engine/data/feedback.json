@@ -1,0 +1,300 @@
+[
+  {
+    "ticket_text": "my network isnt working",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "I was charged twice i need refund",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a1_0",
+      "a4_0"
+    ]
+  },
+  {
+    "ticket_text": "I was charged twice i need refund",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a4_0"
+    ]
+  },
+  {
+    "ticket_text": "hello im facing issues",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a6_0"
+    ]
+  },
+  {
+    "ticket_text": "hello im facing issues",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a1_0"
+    ]
+  },
+  {
+    "ticket_text": "hello im facing issues",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a4_0"
+    ]
+  },
+  {
+    "ticket_text": "hello im facing issues",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a8_0",
+      "a1_0"
+    ]
+  },
+  {
+    "ticket_text": "I hate this service! It is broken and I need help immediately!",
+    "accepted": false,
+    "comment": "Agent rejected suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "refund status",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a4_0"
+    ]
+  },
+  {
+    "ticket_text": "I hate this service! It is broken and I need help immediately!",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a1_0"
+    ]
+  },
+  {
+    "ticket_text": "I want to buy a shirt.",
+    "accepted": false,
+    "comment": "Agent rejected suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "I want to buy a shirt.",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "How do I enable 2FA?",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "How do I enable 2FA?",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "doc_2b1358a9_1",
+      "doc_9ab406d2_1"
+    ]
+  },
+  {
+    "ticket_text": "How do I enable 2FA?",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "Till when is return window there need urgent response",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a7_0"
+    ]
+  },
+  {
+    "ticket_text": "How do I enable 2FA?",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "How do I enable 2FA?",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "How do I enable 2FA?",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "doc_9ab406d2_2"
+    ]
+  },
+  {
+    "ticket_text": "How do I enable 2FA?",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "doc_2b1358a9_2"
+    ]
+  },
+  {
+    "ticket_text": "How do I enable 2FA?",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "How do I enable 2FA?",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "How do I bake a chocolate cake?",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "Login issue",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a2_0"
+    ]
+  },
+  {
+    "ticket_text": "Login issue",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a2_0"
+    ]
+  },
+  {
+    "ticket_text": "I need help with my account",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "I need help with my account",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "Login issue",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a2_0"
+    ]
+  },
+  {
+    "ticket_text": "I need help with my account",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "how can i bake a cake",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "Tell me about redeemption or reward policies",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "doc_2b1358a9_2"
+    ]
+  },
+  {
+    "ticket_text": "Login issue",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a2_0"
+    ]
+  },
+  {
+    "ticket_text": "I need help with my account",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "tell me about reward points",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "tell me about reward points",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "tell me about reward points",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "tell me about reward points",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "doc_fcf48ba8_2"
+    ]
+  },
+  {
+    "ticket_text": "my coupon not working properly",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a5_0"
+    ]
+  },
+  {
+    "ticket_text": "double payment",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a1_0"
+    ]
+  },
+  {
+    "ticket_text": "double payment",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": [
+      "a4_0",
+      "doc_fcf48ba8_4"
+    ]
+  },
+  {
+    "ticket_text": "double payment",
+    "accepted": true,
+    "comment": "Agent accepted suggestion",
+    "used_citations": []
+  },
+  {
+    "ticket_text": "None thank you",
+    "accepted": false,
+    "comment": "Rejected",
+    "used_citations": []
+  }
+]
