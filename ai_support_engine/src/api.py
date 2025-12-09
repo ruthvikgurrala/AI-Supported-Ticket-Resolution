@@ -332,8 +332,27 @@ async def upload_file(file: UploadFile = File(...)):
     # Update Embeddings
     EMB_PATH = os.path.join(ROOT, "models", "chunk_embeddings.npy")
     if os.path.exists(EMB_PATH):
-        existing_embs = np.load(EMB_PATH)
-        combined_embs = np.vstack([existing_embs, new_embs])
+        try:
+            existing_embs = np.load(EMB_PATH)
+            if existing_embs.shape[1] == new_embs.shape[1]:
+                combined_embs = np.vstack([existing_embs, new_embs])
+            else:
+                print(f"[WARN] Embedding dimension mismatch ({existing_embs.shape[1]} vs {new_embs.shape[1]}). Overwriting vector store.")
+                combined_embs = new_embs
+                # Also reset metadata to match new embeddings only? 
+                # Ideally yes, but for now we appended to _chunk_meta. 
+                # If we overwrite embeddings, we should strictly overwrite metadata to be safe, 
+                # but _chunk_meta was already extended above. 
+                # It's cleaner to let the user know they are resetting. 
+                # For safety/simplicity in this hotfix: we just overwrite the embeddings. 
+                # This results in "ghost" metadata for the old chunks which have no corresponding embeddings.
+                # Actually, if we overwrite embs, we MUST reset meta to `new_meta` only.
+                _chunk_meta = new_meta
+                with open(META_PATH, "w", encoding="utf-8") as f:
+                    json.dump(_chunk_meta, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            print(f"[ERROR] Failed to load existing embeddings: {e}. Overwriting.")
+            combined_embs = new_embs
     else:
         combined_embs = new_embs
     

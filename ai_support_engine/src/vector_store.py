@@ -10,20 +10,15 @@ META_PATH = os.path.join(ROOT, "models", "chunk_meta.json")
 
 class SimpleVectorStore:
     def __init__(self, emb_path=EMB_PATH, meta_path=META_PATH):
-        if not os.path.exists(emb_path):
-            raise FileNotFoundError(f"Embeddings not found: {emb_path}")
-        if not os.path.exists(meta_path):
-            raise FileNotFoundError(f"Metadata not found: {meta_path}")
+        if not os.path.exists(emb_path) or not os.path.exists(meta_path):
+            print("[WARN] Vector store files not found. Initializing empty.")
+            self.emb = np.array([])
+            self.meta = []
+        else:
+            self.emb = np.load(emb_path)           # shape: (N, D)
+            with open(meta_path, "r", encoding="utf-8") as f:
+                self.meta = json.load(f)           # list of dicts
 
-        self.emb = np.load(emb_path)           # shape: (N, D)
-        with open(meta_path, "r", encoding="utf-8") as f:
-            self.meta = json.load(f)           # list of dicts
-        # small sanity checks
-        if len(self.meta) != self.emb.shape[0]:
-            print("Warning: meta length and embeddings count mismatch.")
-        # pre-normalize if not already normalized (cosine on normalized vectors = dot product)
-        # but we used normalize_embeddings=True earlier, so vectors are already normalized.
-    
     def search(self, query_vec, top_k=5):
         """
         query_vec: 1D numpy array shape (D,)
@@ -31,8 +26,15 @@ class SimpleVectorStore:
         """
         if query_vec is None:
             return []
+        if len(self.emb) == 0:
+            return []
         # Ensure shape
         q = query_vec.reshape(1, -1)
+        # Verify Dims (Simple check)
+        if q.shape[1] != self.emb.shape[1]:
+             print(f"[ERROR] Dim mismatch! Query={q.shape[1]}, Store={self.emb.shape[1]}. Resetting store recommended.")
+             return []
+
         sims = cosine_similarity(q, self.emb)[0]   # (N,)
         idxs = sims.argsort()[-top_k:][::-1]
         hits = []

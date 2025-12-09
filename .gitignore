@@ -22,6 +22,7 @@ ai_support_engine/ticketsupportresolution-firebase-adminsdk-*.json
 __pycache__/
 *.py[cod]
 *$py.class
+*.npy
 venv/
 env/
 .venv/
