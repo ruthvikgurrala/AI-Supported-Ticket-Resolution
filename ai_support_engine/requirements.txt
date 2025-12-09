@@ -1,11 +1,10 @@
-torch
-transformers
-sentence-transformers
-pandas
-scikit-learn
-nltk
 fastapi
 uvicorn
+python-dotenv
+openai
+numpy
+scikit-learn
 pypdf
 python-multipart
-google-cloud-firestore
+firebase-admin
+requests
