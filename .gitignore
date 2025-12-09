@@ -41,4 +41,6 @@ coverage/
 
 # Project Specific
 ai_support_engine/logs/
-ai_support_engine/data/*.pdf
+
+# Documentation
+deployment_guide.md
