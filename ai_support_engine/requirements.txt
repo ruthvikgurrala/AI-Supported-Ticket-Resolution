@@ -8,3 +8,6 @@ pypdf
 python-multipart
 firebase-admin
 requests
+emoji
+nltk
+pandas
