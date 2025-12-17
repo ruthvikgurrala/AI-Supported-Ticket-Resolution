@@ -85,3 +85,15 @@ cd frontend
 npm run dev
 # Runs on http://localhost:3000
 ```
+
+### Option B: Running with Docker (Recommended)
+Run the entire stack (Frontend + Backend) with a single command:
+
+1.  **Setup Environment**: Ensure your `ai_support_engine/.env` file is populated.
+2.  **Run**:
+    ```bash
+    docker-compose up --build
+    ```
+    *   **Frontend**: http://localhost:3000
+    *   **Backend**: http://localhost:8000
+
