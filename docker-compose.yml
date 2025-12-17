@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # ----------------------------------------
+  # Backend (FastAPI)
+  # ----------------------------------------
+  backend:
+    build:
+      context: ./ai_support_engine
+      dockerfile: Dockerfile
+    container_name: owntrail-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./ai_support_engine/.env # Read your existing .env file
+    volumes:
+      # Mount source code for hot-reloading (edit local, updates inside)
+      - ./ai_support_engine/src:/app/src
+      # Persist models/data so they don't vanish on restart
+      - ./ai_support_engine/models:/app/models
+      - ./ai_support_engine/data:/app/data
+
+  # ----------------------------------------
+  # Frontend (React + Vite)
+  # ----------------------------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: owntrail-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:8000
+    depends_on:
+      - backend
+    volumes:
+      # Mount source code for hot-reloading
+      - ./frontend/src:/app/src

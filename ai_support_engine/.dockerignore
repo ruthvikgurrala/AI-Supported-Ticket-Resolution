@@ -1,0 +1,26 @@
+
+# ----------------------------------------------------------------------
+# .dockerignore
+# ----------------------------------------------------------------------
+# Ignore the virtual environment (HUGE savings)
+venv/
+.venv/
+
+# Ignore python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore git history
+.git/
+.gitignore
+
+# Ignore local env files (safety)
+.env
+
+# Ignore logs
+logs/
+
+# Ignore large model files if you want to keep image light
+# (Optional: for now we keep models unless they are huge)
+# models/*.bin
